@@ -56,10 +56,10 @@ func main() {
 		log.Println("Error getting Twitter Client")
 		log.Println(err)
 	}
-
+	tweetBody := os.Args[1]
 	// Print out the pointer to our client
 	// for now so it doesn't throw errors
-	tweet, resp, err := client.Statuses.Update("Beep boop.", nil)
+	tweet, resp, err := client.Statuses.Update(tweetBody, nil)
 	if err != nil {
 		log.Println(err)
 	}
