@@ -17,7 +17,7 @@ type Credentials struct {
 }
 
 func getClient(creds *Credentials) (*twitter.Client, error) {
-	// Pass in your consumer key (API Key) and your Consumer Secret (API Secret)
+	// the config var takes in your consumer key (api key) and consumer secret (api secret)
 	config := oauth1.NewConfig(creds.ConsumerKey, creds.ConsumerSecret)
 	// Pass in your Access Token and your Access Token Secret
 	token := oauth1.NewToken(creds.AccessToken, creds.AccessTokenSecret)
